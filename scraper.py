@@ -22,6 +22,10 @@
 # is that your final data is written to an Sqlite database called data.sqlite in the current working directory which
 # has at least a table called data.
 
+
+import scraperwiki
+import lxml.html
+
 html = scraperwiki.scrape("http://www.hobbyking.com/hobbyking/store/__86__85__Batteries_Accessories-Li_Poly_All_brands_.html")
 root = lxml.html.fromstring(html)
 root.find_class("addToCartQty")
